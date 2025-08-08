@@ -95,9 +95,11 @@ int handle_client(int sock)
             break;
 
         case CMD_EXECUTE:
+            char buffer_input[MAX_DATA_LEN + 5] = {0};
             syslog(LOG_INFO, "EXECUTE command received: %s", buffer);
+            sprintf(buffer_input, "%s 2>&1", buffer);
             // 在实际应用中，这里应该进行严格的安全检查
-			FILE* fp = popen(buffer, "r");
+			FILE* fp = popen(buffer_input, "r");
             if (fp == NULL)
             {
                 resp_header.status = 0x03; // 执行失败

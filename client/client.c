@@ -118,11 +118,11 @@ int main(int argc, char *argv[])
     {
         fprintf(stderr, "Usage: %s <command> [arguments]\n", argv[0]);
         fprintf(stderr, "Available commands:\n");
-        fprintf(stderr, "  echo <text>      - Echo text\n");
-        fprintf(stderr, "  info             - Get server info\n");
-        fprintf(stderr, "  exec <command>   - Execute shell command\n");
-        fprintf(stderr, "  shutdown         - Shutdown server\n");
-		fprintf(stderr, "  stop             - Stop server\n");
+        fprintf(stderr, "  echo <text>         - Echo text\n");
+        fprintf(stderr, "  info                - Get server info\n");
+        fprintf(stderr, "  exec <command>      - Execute shell command\n");
+        fprintf(stderr, "  calc <expression>   - parse expression\n");
+		fprintf(stderr, "  stop                - Stop server\n");
         return EXIT_FAILURE;
     }
 
