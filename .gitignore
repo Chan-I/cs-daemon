@@ -1,0 +1,3 @@
+*.o
+cs_daemon_client
+cs_daemon_server
